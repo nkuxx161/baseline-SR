@@ -25,7 +25,7 @@ def get_curve(machine_path, machine_id):
         # data_dic = {'value': value}
         kpi_data = pd.DataFrame(data_dic)
         print('save', str(machine_id)+'_'+col, kpi_data.shape)
-        save_path = os.path.join('./curves', str(machine_id) + '_' + col + '.csv')
+        save_path = os.path.join('./curves_with_header', str(machine_id) + '_' + col + '.csv')
         kpi_data.to_csv(save_path, index=None)
         # kpi_data.to_csv(save_path, index=None, header=None)
 
